@@ -26,9 +26,10 @@ public class HealthController : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
 
+
             Hurt();
-        }
        
+        }
 
 
     }
