@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[AddComponentMenu("Physics 2D/EX")]
 public class PracticeClass : MonoBehaviour
 {
     void Start()
@@ -29,6 +29,8 @@ public class PracticeClass : MonoBehaviour
 
 //#endif
 
+        //#if ¿¬½À
+    
     }
 
 
