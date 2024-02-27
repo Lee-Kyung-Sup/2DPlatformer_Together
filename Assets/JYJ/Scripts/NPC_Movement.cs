@@ -1,68 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class NPC_Movement : MonoBehaviour
 {
-    Rigidbody2D rigid;
-    public int nextMove;
+    float rightMax = 4.86f;
+    float leftMax = 0.86f;
+    float currentPositionX;
+    float direction = 2.0f;
+
     Animator anim;
     SpriteRenderer spriteRenderer;
-    void Awake()
+
+    private void Awake()
     {
-        rigid = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        Invoke("Think", 3);
     }
-
-    // Update is called once per frame
-    void FixedUpdate()
+    private void Start()
     {
-        rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
-
-        //발판 유뮤 체크, 없으면 멈춤
-        Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 0.2f, rigid.position.y);
-        Debug.DrawRay(frontVec, Vector3.down, new Color(0, 1, 0));
-        RaycastHit2D rayHit = Physics2D.Raycast(frontVec, Vector3.down, 1, LayerMask.GetMask("Platform"));
-
-        if (rayHit.collider == null)
-            Turn();
+        currentPositionX = transform.position.x;
     }
 
-    void Think()    //몬스터 움직임 AI함수
+    private void Update()
     {
-        // 움직이고 난 후에 다음에 어떻게 해야하지?
-        nextMove = Random.Range(-1, 2);
+        currentPositionX += Time.deltaTime * direction;
 
-        float nextThinkTime = Random.Range(2f, 5f);
-        Invoke("Think", nextThinkTime); // 재귀함수
+        if(currentPositionX >= rightMax) 
+        {
+            direction *= -1;
+            currentPositionX = rightMax;
+            spriteRenderer.flipX = true;
+        }
+        else if(currentPositionX <= leftMax)
+        {
+            direction *= -1;
+            currentPositionX = leftMax;
+            spriteRenderer.flipX = false;
+        }
+        anim.SetBool("IsWalking", true);
 
-        //몬스터 애니메이션
-        anim.SetInteger("WalkSpeed", nextMove);
-
-        //몬스터 방향전환
-        if (nextMove != 0)
-            spriteRenderer.flipX = nextMove == 1;
+        transform.position = new Vector3(currentPositionX, -2.31f, 0);
     }
-    void Turn()
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        nextMove *= -1;
-        spriteRenderer.flipX = nextMove == 1;
-
-        CancelInvoke();
-        Invoke("Think", 3);
+        if(collision.gameObject.tag == "Player")
+        {
+            transform.position = new Vector3(0, 0, 0);
+            anim.SetBool("IsWalking", false);
+        }
     }
-
-
-    //void OnCollisionEnter2D(Collision2D collision) // 몬스터 피격시, 공격 애니메이션 이벤트
-    //{
-    //    if (collision.gameObject.layer == 12)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-
-    //}
-
-
 }
