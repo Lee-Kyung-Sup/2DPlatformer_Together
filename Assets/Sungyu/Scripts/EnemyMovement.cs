@@ -5,14 +5,14 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     Rigidbody2D rigid;
-    Animator anim;
+    Animator enemyAnim;
     SpriteRenderer spriteRenderer;
     public int nextMove;
 
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
-        anim = GetComponentInChildren<Animator>();
+        enemyAnim = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         Invoke("Think", 5);
     }
@@ -39,7 +39,7 @@ public class EnemyMovement : MonoBehaviour
         float nextThinkTime = Random.Range(2f, 5f);
         Invoke("Think", nextThinkTime);
         //Sprite Animation
-        anim.SetInteger("WalkSpeed", nextMove);
+        enemyAnim.SetInteger("WalkSpeed", nextMove);
         //Flip Sprite
         if(nextMove != 0)
         spriteRenderer.flipX = nextMove == -1;        
