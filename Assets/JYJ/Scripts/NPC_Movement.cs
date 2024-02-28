@@ -44,12 +44,23 @@ public class NPC_Movement : MonoBehaviour
         transform.position = new Vector3(currentPositionX, -2.31f, 0);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-            transform.position = new Vector3(0, 0, 0);
-            anim.SetBool("IsWalking", false);
+            direction = 0;
+            foreach (SpriteRenderer renderer in transform.GetComponentsInChildren<SpriteRenderer>())
+            {
+                Color color = renderer.color;
+                color.a = 0.3f;
+                renderer.color = color;
+            }
+
+            foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
+            {
+                component.enabled = false;
+            }
+            Destroy(this.gameObject, 2f);
         }
     }
 }

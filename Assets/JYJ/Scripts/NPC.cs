@@ -8,22 +8,34 @@ public class NPC : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    [SerializeField] private GameObject NPCUI;
-    public GameObject Text1;
-    public GameObject Text2;
+    [SerializeField] private GameObject NPCUI1;
+    [SerializeField] private GameObject NPCUI2;
+    [SerializeField] private GameObject Store;
+    //public GameObject Text1;
+    //public GameObject Text2;
 
     private void OnMouseDown()
     {
-        NPCUI.SetActive(true);
+        NPCUI1.SetActive(true);
     }
 
     public void ExitBtn()
     {
-        NPCUI.SetActive(false);
+        NPCUI2.SetActive(false);
     }
-    public void NextBtn()
+    public void StoreBtn()
     {
-        Text1.SetActive(false);
-        Text2.SetActive(true);
+        NPCUI1.SetActive(false);
+        Store.SetActive(true);
+    }
+    public void NPCUI2Btn()
+    {
+        NPCUI1.SetActive(false);
+        NPCUI2.SetActive(true);
+    }
+
+    public void StroeExitBtn()
+    {
+        Store.SetActive(false);
     }
 }
