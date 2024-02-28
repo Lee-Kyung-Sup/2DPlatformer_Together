@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b56555eea47315c4797cbbd39e178d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &136685700
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +781,7 @@ GameObject:
   - component: {fileID: 574291698}
   - component: {fileID: 574291699}
   m_Layer: 0
-  m_Name: Knife
+  m_Name: PlayerCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -830,7 +831,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 2.49, y: -0.23}
@@ -1177,6 +1178,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1722084007078441544, guid: 6dbfd02091f5a8340a3ab89ef1d39fac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 896795440}
+    - targetCorrespondingSourceObject: {fileID: 1722084007078441544, guid: 6dbfd02091f5a8340a3ab89ef1d39fac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 896795442}
   m_SourcePrefab: {fileID: 100100000, guid: 6dbfd02091f5a8340a3ab89ef1d39fac, type: 3}
 --- !u!1 &896795439 stripped
 GameObject:
@@ -1210,6 +1214,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObjectName: backbackground (1)
   sceneName: End_3_Scene
+--- !u!114 &896795442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896795439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c9987fc78852e4d959f6047d7e58e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &900777334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2613,6 +2629,7 @@ GameObject:
   - component: {fileID: 1950020859}
   - component: {fileID: 1950020861}
   - component: {fileID: 1950020860}
+  - component: {fileID: 1950020862}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -2721,6 +2738,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.82, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1950020862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950020857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56555eea47315c4797cbbd39e178d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &1969605406
 GameObject:
   m_ObjectHideFlags: 0
