@@ -24,7 +24,7 @@ public class EnemyMove2 : MonoBehaviour
         //발판 유뮤 체크, 없으면 멈춤
         Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 0.3f, rigid.position.y);
         Debug.DrawRay(frontVec, Vector3.down, new Color(0, 1, 0));
-        RaycastHit2D rayHit = Physics2D.Raycast(frontVec, Vector3.down, 2, LayerMask.GetMask("Platform"));
+        RaycastHit2D rayHit = Physics2D.Raycast(frontVec, Vector3.down, 2, LayerMask.GetMask("Level"));
 
         if (rayHit.collider == null)
             Turn();
@@ -57,7 +57,7 @@ public class EnemyMove2 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision) // 몬스터 피격시, 공격 애니메이션 이벤트
     {
-        if (collision.gameObject.tag == "Bullet") 
+        if (collision.gameObject.tag == "Bullet")
         {
             Destroy(gameObject);
         }
