@@ -19504,6 +19504,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 786811087812217135, guid: 6dbfd02091f5a8340a3ab89ef1d39fac, type: 3}
+      propertyPath: pos
+      value: 
+      objectReference: {fileID: 1819236129}
+    - target: {fileID: 786811087812217135, guid: 6dbfd02091f5a8340a3ab89ef1d39fac, type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 0}
@@ -19566,6 +19570,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1207598063}
   m_SourcePrefab: {fileID: 100100000, guid: 6dbfd02091f5a8340a3ab89ef1d39fac, type: 3}
+--- !u!4 &1819236129 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2650535932363486119, guid: 6dbfd02091f5a8340a3ab89ef1d39fac, type: 3}
+  m_PrefabInstance: {fileID: 1819236128}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1858523330
 GameObject:
   m_ObjectHideFlags: 0
