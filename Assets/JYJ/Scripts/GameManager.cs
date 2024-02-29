@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public Text UserMoney;
     public int Money;
 
+
     private void Awake()
     {
         if (Instance != null)
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
     private void Start()
     {
