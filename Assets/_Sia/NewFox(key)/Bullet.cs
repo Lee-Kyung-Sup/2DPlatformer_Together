@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     public LayerMask isLayer;
     void Start()
     {
-        Invoke("DestroyBullet", 2);
+        Invoke("DestroyBullet", 0.5f);
     }
 
     // Update is called once per frame
