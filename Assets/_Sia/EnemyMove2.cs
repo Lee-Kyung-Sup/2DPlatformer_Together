@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMove : MonoBehaviour
+public class EnemyMove2 : MonoBehaviour
 {
     Rigidbody2D rigid;
     public int nextMove;
@@ -42,7 +42,7 @@ public class EnemyMove : MonoBehaviour
         anim.SetInteger("WalkSpeed", nextMove);
 
         //몬스터 방향전환
-        if(nextMove !=0 )
+        if (nextMove != 0)
             spriteRenderer.flipX = nextMove == 1;
     }
     void Turn()
@@ -54,15 +54,15 @@ public class EnemyMove : MonoBehaviour
         Invoke("Think", 3);
     }
 
-    
+
     void OnCollisionEnter2D(Collision2D collision) // 몬스터 피격시, 공격 애니메이션 이벤트
     {
-        if (collision.gameObject.layer == 12)
+        if (collision.gameObject.tag == "Bullet") 
         {
             Destroy(gameObject);
         }
 
     }
 
-    
+
 }

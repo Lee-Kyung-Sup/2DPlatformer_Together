@@ -21,7 +21,7 @@ TagManager:
   - PlayerDamaged
   - PlayerAttack
   - Object
-  - 
+  - Bullet
   - 
   - 
   - 
