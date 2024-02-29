@@ -26,8 +26,27 @@ public class PlayerMove : MonoBehaviour
         
     }
 
+    //바닥 점프시 통과
+    int playerLayer, platformLayer;
+    void Start()
+    {
+        playerLayer = LayerMask.NameToLayer("Player");
+        platformLayer = LayerMask.NameToLayer("Platform");
+    }
     void Update()
     {
+        //바닥 점프시 통과
+        if(rigid.velocity.y > 0)
+        {
+            Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, true);
+        }
+        else
+        {
+            Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, false);
+        }
+
+
+
         if (Input.GetButtonUp("Horizontal"))
         {
             //키 뗐을 때
