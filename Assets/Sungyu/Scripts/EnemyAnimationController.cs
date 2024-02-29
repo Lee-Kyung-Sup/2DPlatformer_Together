@@ -14,4 +14,9 @@ public class EnemyAnimationController: MonoBehaviour
     {
         animator.SetBool("IsWalk", anmationRun);
     }
+
+    public void EnemyAttack(bool anmationRun)
+    {
+        animator.SetBool("IsAttack", anmationRun);
+    }
 }
