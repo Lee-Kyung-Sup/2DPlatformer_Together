@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DisappearingPlatform : MonoBehaviour
 {
-    [SerializeField] float disappearTime = 0.7f, returnTime = 1f;
+    [SerializeField] float disappearTime = 0.7f, returnTime = 3f;
     Rigidbody2D rb;
     Vector2 startPos;
     bool isBack;
@@ -29,7 +29,7 @@ public class DisappearingPlatform : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name.Equals("Player") && !isBack)
+        if(collision.gameObject.tag == "Player" && !isBack)
         {
             Invoke("DisappearPlatform", disappearTime);
         }
