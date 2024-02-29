@@ -12,6 +12,8 @@ public class NPC_Movement : MonoBehaviour
 
     Animator anim;
     SpriteRenderer spriteRenderer;
+    [SerializeField] private GameObject Penguin;
+    [SerializeField] private GameObject Gold;
 
     private void Awake()
     {
@@ -60,7 +62,17 @@ public class NPC_Movement : MonoBehaviour
             {
                 component.enabled = false;
             }
-            Destroy(this.gameObject, 2f);
+            Invoke("PenguinBye", 1f);
+            //Destroy(this.gameObject, 2f);
+            MakeGold();
         }
+    }
+    public void PenguinBye()
+    {
+        Penguin.SetActive(false);
+    }
+    void MakeGold()
+    {
+        Gold.SetActive(true);
     }
 }
