@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class GoblinMovement : MonoBehaviour
 {
     Rigidbody2D rigid;   
     SpriteRenderer spriteRenderer;
     public int nextMove;
     EnemyAnimationController enemyAnim;
+   
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();        
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        enemyAnim = GetComponent<EnemyAnimationController>();
+        enemyAnim = GetComponent<EnemyAnimationController>();        
         Invoke("Think", 5);
     }
-
+    
     private void FixedUpdate()
     {
         //Move
@@ -47,16 +48,16 @@ public class EnemyMovement : MonoBehaviour
     }
     bool SetAnimation()
     {
-        bool animrun = false;
+        
         if(nextMove != 0)
         {
-            animrun = true;
+            return true;
         }
         else
         {
-            animrun = false;
+            return false;
         }
-        return animrun;
+        
     }
     void Turn()
     {
