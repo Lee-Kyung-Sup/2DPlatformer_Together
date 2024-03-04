@@ -18,11 +18,17 @@ public class PlayerController : MonoBehaviour
 
     bool IsGround;
     SpriteRenderer spriteRenderer;
+
+    //바닥 점프시 통과
+    int playerLayer, platformLayer;
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        playerLayer = LayerMask.NameToLayer("Player");
+        platformLayer = LayerMask.NameToLayer("Platform");
     }
 
     
@@ -40,18 +46,30 @@ public class PlayerController : MonoBehaviour
 
 
 
+
         IsGround = Physics2D.OverlapCircle(pos.position, checkRadius, islayer);
+
         if (Input.GetKeyDown(KeyCode.Space) && IsGround == true)
         { // 점프&&바닥에 닿았을때만
             rigid.velocity = Vector2.up * Jump;
             anim.SetBool("IsJumping", true);
+        }
+
+        //바닥 점프시 통과
+        if (rigid.velocity.y > 0)
+        {
+            Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, true);
+        }
+        else
+        {
+            Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, false);
         }
     }
 
     private void FixedUpdate()
     {
         float hor = Input.GetAxis("Horizontal"); // 캐릭터 이동
-        rigid.velocity = new Vector2(hor * 5, rigid.velocity.y);
+        rigid.velocity = new Vector2(hor * 4, rigid.velocity.y);
 
         //hor left > -1 , hor right > 1 방향 변경
         if (hor > 0)
