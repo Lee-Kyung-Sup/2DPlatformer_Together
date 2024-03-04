@@ -1,32 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FallingPlatform : MonoBehaviour
 {
-    [SerializeField] float fallSec = 0.5f, destroySec = 2f;
+    [SerializeField] float fallDelay = 0.5f;
+    [SerializeField] float respawnDelay = 2f;
+
     Rigidbody2D rb;
+    PlatformEffector2D platformEffector;
+    Vector2 originalPosition;
+    bool isFalling = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        platformEffector = GetComponent<PlatformEffector2D>();
+        originalPosition = transform.position;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == ("Player") && !isFalling)
         {
-            Invoke("FallPlatform", fallSec);
-            Destroy(gameObject, destroySec);
+            Invoke("FallPlatform", fallDelay);
         }
     }
-    
+
     void FallPlatform()
     {
         rb.isKinematic = false;
+        isFalling = true;
+        Invoke("RespawnPlatform", respawnDelay);
     }
 
-    void Update()
+    void RespawnPlatform()
     {
-        
+        transform.position = originalPosition;
+        rb.velocity = Vector2.zero;
+        rb.isKinematic = true;
+        isFalling = false;
     }
 }
+
