@@ -961,7 +961,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99735924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.579, y: -0.473, z: 0}
+  m_LocalPosition: {x: 2.81, y: -0.28, z: 0}
   m_LocalScale: {x: 0.62, y: 0.39, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -980,8 +980,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &99735927
 Rigidbody2D:
   serializedVersion: 4
@@ -1121,7 +1121,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 179
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -11806,7 +11806,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784698823}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.15, y: -2.59, z: 0}
+  m_LocalPosition: {x: 3.79, y: -2.44, z: 0}
   m_LocalScale: {x: 0.62, y: 0.39, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11825,8 +11825,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &784698826
 Rigidbody2D:
   serializedVersion: 4
@@ -11966,7 +11966,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 179
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -16667,7 +16667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837397645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.58, y: -1.48, z: 0}
+  m_LocalPosition: {x: 4.4, y: -1.1, z: 0}
   m_LocalScale: {x: 0.62, y: 0.39, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16686,8 +16686,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &837397648
 Rigidbody2D:
   serializedVersion: 4
@@ -16827,7 +16827,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 179
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -17210,7 +17210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857562579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6, y: -2.99, z: 0}
+  m_LocalPosition: {x: 5.31, y: -3.01, z: 0}
   m_LocalScale: {x: 0.62, y: 0.39, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17229,8 +17229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &857562582
 Rigidbody2D:
   serializedVersion: 4
@@ -17370,7 +17370,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 179
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -18453,11 +18453,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7778597801054133337, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.8
+      value: 72.09
       objectReference: {fileID: 0}
     - target: {fileID: 7778597801054133337, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3
+      value: -0.55
       objectReference: {fileID: 0}
     - target: {fileID: 7778597801054133337, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18544,7 +18544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978905533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.92, y: -1.564, z: 0}
+  m_LocalPosition: {x: 5.89, y: -1.51, z: 0}
   m_LocalScale: {x: 0.62, y: 0.39, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18563,8 +18563,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &978905536
 Rigidbody2D:
   serializedVersion: 4
@@ -18704,7 +18704,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 179
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -18958,7 +18958,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003238033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3, y: 1.56, z: 0}
+  m_LocalPosition: {x: 5.06, y: 1.67, z: 0}
   m_LocalScale: {x: 0.62, y: 0.39, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18977,8 +18977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &1003238036
 Rigidbody2D:
   serializedVersion: 4
@@ -19118,7 +19118,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 179
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -34147,7 +34147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772069579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.241, y: -0.208, z: 0}
+  m_LocalPosition: {x: 5.2, y: -0.13, z: 0}
   m_LocalScale: {x: 0.62, y: 0.39, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34166,8 +34166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &1772069582
 Rigidbody2D:
   serializedVersion: 4
@@ -34307,7 +34307,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 179
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -37382,7 +37382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113921340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.31, y: 0.65, z: 0}
+  m_LocalPosition: {x: 3.81, y: 0.89, z: 0}
   m_LocalScale: {x: 0.62, y: 0.39, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37401,8 +37401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &2113921343
 Rigidbody2D:
   serializedVersion: 4
@@ -37542,7 +37542,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 179
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
