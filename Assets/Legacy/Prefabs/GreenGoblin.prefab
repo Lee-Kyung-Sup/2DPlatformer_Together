@@ -9,10 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1783038696886536177}
-  - component: {fileID: 9075252105417692656}
   - component: {fileID: 9121645383604763394}
   - component: {fileID: 905028830543765349}
-  - component: {fileID: 6008115427778395702}
   m_Layer: 9
   m_Name: GreenGoblin
   m_TagString: Enemy
@@ -34,21 +32,8 @@ Transform:
   m_Children:
   - {fileID: 6973782536607810915}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9075252105417692656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4040322387715401001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e634ede79bac534dad7e3b35dcd1574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextMove: 0
 --- !u!61 &9121645383604763394
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -121,19 +106,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6008115427778395702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4040322387715401001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b56555eea47315c4797cbbd39e178d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
 --- !u!1 &4195756997591871852
 GameObject:
   m_ObjectHideFlags: 0
