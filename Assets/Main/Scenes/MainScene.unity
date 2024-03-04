@@ -572,6 +572,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownHit: 0
+  life: []
+  qtdLife: 0
 --- !u!1 &60935266
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,8 +982,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &99735927
 Rigidbody2D:
   serializedVersion: 4
@@ -2002,6 +2004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ecad7956dfaf64d9eef0a692d621af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 0}
   MoneySprite: {fileID: 0}
   SoldOut1Sprite: {fileID: 904834444}
   SoldOut2Sprite: {fileID: 0}
@@ -2009,6 +2012,8 @@ MonoBehaviour:
   Store1Money: 22222
   Store2Money: 0
   Store3Money: 0
+  NPCUI3: {fileID: 0}
+  NPCBeggar: {fileID: 0}
 --- !u!114 &164162824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2646,6 +2651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ecad7956dfaf64d9eef0a692d621af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 0}
   MoneySprite: {fileID: 0}
   SoldOut1Sprite: {fileID: 0}
   SoldOut2Sprite: {fileID: 0}
@@ -2653,6 +2659,8 @@ MonoBehaviour:
   Store1Money: 0
   Store2Money: 0
   Store3Money: 44444
+  NPCUI3: {fileID: 0}
+  NPCBeggar: {fileID: 0}
 --- !u!114 &208850252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3826,7 +3834,7 @@ RectTransform:
   m_GameObject: {fileID: 402275923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2082305192}
@@ -11595,6 +11603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ecad7956dfaf64d9eef0a692d621af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 0}
   MoneySprite: {fileID: 775519038}
   SoldOut1Sprite: {fileID: 0}
   SoldOut2Sprite: {fileID: 0}
@@ -11602,6 +11611,8 @@ MonoBehaviour:
   Store1Money: 0
   Store2Money: 0
   Store3Money: 0
+  NPCUI3: {fileID: 0}
+  NPCBeggar: {fileID: 0}
 --- !u!4 &775519042
 Transform:
   m_ObjectHideFlags: 0
@@ -11825,8 +11836,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &784698826
 Rigidbody2D:
   serializedVersion: 4
@@ -16686,8 +16697,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &837397648
 Rigidbody2D:
   serializedVersion: 4
@@ -17229,8 +17240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &857562582
 Rigidbody2D:
   serializedVersion: 4
@@ -18563,8 +18574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &978905536
 Rigidbody2D:
   serializedVersion: 4
@@ -18907,12 +18918,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UserMoney: {fileID: 925138109}
   Money: 1000
-  MaxLife: 3
-  currentLife: 3
   HP1Sprite: {fileID: 146672891}
   HP2Sprite: {fileID: 845571212}
   HP3Sprite: {fileID: 1420410709}
-  NPCUI3: {fileID: 402275923}
 --- !u!4 &998018023
 Transform:
   m_ObjectHideFlags: 0
@@ -18977,8 +18985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &1003238036
 Rigidbody2D:
   serializedVersion: 4
@@ -28281,6 +28289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ecad7956dfaf64d9eef0a692d621af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 0}
   MoneySprite: {fileID: 1157435649}
   SoldOut1Sprite: {fileID: 0}
   SoldOut2Sprite: {fileID: 0}
@@ -28288,6 +28297,8 @@ MonoBehaviour:
   Store1Money: 0
   Store2Money: 0
   Store3Money: 0
+  NPCUI3: {fileID: 0}
+  NPCBeggar: {fileID: 0}
 --- !u!4 &1157435653
 Transform:
   m_ObjectHideFlags: 0
@@ -31871,7 +31882,7 @@ RectTransform:
   m_GameObject: {fileID: 1469551057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 545964123}
@@ -32780,6 +32791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ecad7956dfaf64d9eef0a692d621af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 0}
   MoneySprite: {fileID: 1582867473}
   SoldOut1Sprite: {fileID: 0}
   SoldOut2Sprite: {fileID: 0}
@@ -32787,6 +32799,8 @@ MonoBehaviour:
   Store1Money: 0
   Store2Money: 0
   Store3Money: 0
+  NPCUI3: {fileID: 0}
+  NPCBeggar: {fileID: 0}
 --- !u!4 &1582867477
 Transform:
   m_ObjectHideFlags: 0
@@ -34310,8 +34324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &1772069582
 Rigidbody2D:
   serializedVersion: 4
@@ -36753,7 +36767,7 @@ RectTransform:
   m_GameObject: {fileID: 2018097682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1490836465}
@@ -37197,6 +37211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ecad7956dfaf64d9eef0a692d621af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 0}
   MoneySprite: {fileID: 0}
   SoldOut1Sprite: {fileID: 0}
   SoldOut2Sprite: {fileID: 203122204}
@@ -37204,6 +37219,8 @@ MonoBehaviour:
   Store1Money: 0
   Store2Money: 33333
   Store3Money: 0
+  NPCUI3: {fileID: 0}
+  NPCBeggar: {fileID: 0}
 --- !u!114 &2043367106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37545,8 +37562,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31101c54f1daf9743ba29b4fa7cde13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSec: 1.5
-  destroySec: 2
+  fallDelay: 0.5
+  respawnDelay: 2
 --- !u!50 &2113921343
 Rigidbody2D:
   serializedVersion: 4
@@ -37751,7 +37768,7 @@ RectTransform:
   m_GameObject: {fileID: 2127859789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 809165707}
