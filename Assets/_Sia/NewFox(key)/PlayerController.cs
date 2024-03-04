@@ -134,6 +134,6 @@ public class PlayerController : MonoBehaviour
     void OffDamaged() // 피격 후 2초 후에 레이어 원래대로
     {
         gameObject.layer = 11;
-        spriteRenderer.color = new Color(1, 1, 1, 1);
+        spriteRenderer.color = new Color(178, 165, 165, 255);
     }
 }

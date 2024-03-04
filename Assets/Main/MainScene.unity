@@ -18497,15 +18497,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8929991564435354492, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.6487184
       objectReference: {fileID: 0}
     - target: {fileID: 8929991564435354492, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.6487184
       objectReference: {fileID: 0}
     - target: {fileID: 8929991564435354492, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.6981132
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18906,12 +18906,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UserMoney: {fileID: 925138109}
-  Money: 222222
+  Money: 1000
   MaxLife: 3
-  currentLife: 2
+  currentLife: 3
   HP1Sprite: {fileID: 146672891}
-  HP2Sprite: {fileID: 0}
-  HP3Sprite: {fileID: 0}
+  HP2Sprite: {fileID: 845571212}
+  HP3Sprite: {fileID: 1420410709}
   NPCUI3: {fileID: 402275923}
 --- !u!4 &998018023
 Transform:
