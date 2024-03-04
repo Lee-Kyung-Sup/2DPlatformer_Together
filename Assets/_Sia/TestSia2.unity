@@ -465,9 +465,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 596474773397342702, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 770857689261287631, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_Name
       value: NewFox(key)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5047706603266551798, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
+      propertyPath: Jump
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7778597801054133337, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_RootOrder

@@ -17,10 +17,12 @@ public class PlayerController : MonoBehaviour
     LayerMask islayer;
 
     bool IsGround;
+    SpriteRenderer spriteRenderer;
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     
@@ -49,7 +51,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         float hor = Input.GetAxis("Horizontal"); // 캐릭터 이동
-        rigid.velocity = new Vector2(hor * 3, rigid.velocity.y);
+        rigid.velocity = new Vector2(hor * 5, rigid.velocity.y);
 
         //hor left > -1 , hor right > 1 방향 변경
         if (hor > 0)
@@ -71,11 +73,38 @@ public class PlayerController : MonoBehaviour
                     anim.SetBool("IsJumping", false);
             }
         }
-
-        if (Input.GetKey(KeyCode.X))
+        if (Input.GetKey(KeyCode.X)) // 웅크리기
         {
             anim.SetTrigger("Crouch");
 
         }
+    }
+    void OnCollisionEnter2D(Collision2D collision) // 플레이어 피격 이벤트
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            OnDamaged(collision.transform.position);
+        }
+
+    }
+    void OnDamaged(Vector2 targetPos) // 맞았을 때, 레이어 바꿔서 적용하기
+    {
+        gameObject.layer = 12;
+
+        spriteRenderer.color = new Color(1, 1, 1, 0.4f);
+
+        int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
+        rigid.AddForce(new Vector2(dirc, 1) * 7, ForceMode2D.Impulse);
+
+        //피격 애니메이션
+        anim.SetTrigger("doDamaged");
+
+        Invoke("OffDamaged", 2);
+    }
+
+    void OffDamaged() // 피격 후 2초 후에 레이어 원래대로
+    {
+        gameObject.layer = 11;
+        spriteRenderer.color = new Color(1, 1, 1, 1);
     }
 }
