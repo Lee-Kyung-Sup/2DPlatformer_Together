@@ -17,7 +17,6 @@ public class Gold : MonoBehaviour
     public int Store2Money;
     public int Store3Money;
     
-    
 
     private void Awake()
     {
@@ -79,12 +78,20 @@ public class Gold : MonoBehaviour
     }
     public void BuyBtn3()
     {
-        int numMoney = GameManager.Instance.Money;
+        if(GameManager.Instance.currentLife == 3)
+        {
+            GameManager.Instance.Heal();
+        }
+        else
+        {
+            GameManager.Instance.Heal();
+            int numMoney = GameManager.Instance.Money;
 
-        currentValue = numMoney - Store3Money;
-        GameManager.Instance.Money = currentValue;
-        GameManager.Instance.UserMoney.text = String.Format("{0:#,###}", currentValue);
-        SoldOut3Sprite.SetActive(true);
+            currentValue = numMoney - Store3Money;
+            GameManager.Instance.Money = currentValue;
+            GameManager.Instance.UserMoney.text = String.Format("{0:#,###}", currentValue);
+            SoldOut3Sprite.SetActive(true);
+        }
     }
 
 }
