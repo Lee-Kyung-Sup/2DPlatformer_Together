@@ -43,7 +43,8 @@ public class HealthController : MonoBehaviour
         }
 
         if (qtdLife <= 0)
-        {            
+        {
+            GameManager.Instance.gameObject.SetActive(false);
             SceneManager.LoadScene("End_3_Scene");
         }
     }
