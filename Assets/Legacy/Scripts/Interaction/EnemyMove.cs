@@ -8,6 +8,9 @@ public class EnemyMove : MonoBehaviour
     public int nextMove;
     Animator anim;
     SpriteRenderer spriteRenderer;
+
+    public AudioSource mySfx;
+    public AudioClip dieSfx;
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -59,6 +62,7 @@ public class EnemyMove : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            DieSound();
             Invoke("Die", 3f);
         }
 
@@ -70,5 +74,9 @@ public class EnemyMove : MonoBehaviour
         Destroy(gameObject);
     }
 
-    
+    void DieSound()
+    {
+        mySfx.PlayOneShot(dieSfx);
+    }
+
 }

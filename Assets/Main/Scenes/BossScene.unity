@@ -13409,8 +13409,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: BestEndScene
-  mySfx: {fileID: 0}
-  dieSfx: {fileID: 8300000, guid: 98fd420e2c49ca048b80c2ca53e7e355, type: 3}
+  mySfx: {fileID: 1725628193}
+  dieSfx: {fileID: 8300000, guid: d6949d8af26d10c4f8254c7f31ac4158, type: 3}
 --- !u!1 &1245276822
 GameObject:
   m_ObjectHideFlags: 0
@@ -15500,7 +15500,7 @@ GameObject:
   - component: {fileID: 1725628192}
   - component: {fileID: 1725628193}
   m_Layer: 0
-  m_Name: Mosterdie
+  m_Name: BossDie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15531,7 +15531,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d6949d8af26d10c4f8254c7f31ac4158, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

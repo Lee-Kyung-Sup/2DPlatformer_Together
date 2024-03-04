@@ -15,8 +15,11 @@ public class NPC : MonoBehaviour
     //public GameObject Text1;
     //public GameObject Text2;
 
+    public AudioSource mySfx;
+    public AudioClip storeSfx;
     private void OnMouseDown()
     {
+        EnterStore();
         NPCUI1.SetActive(true);
     }
 
@@ -43,5 +46,10 @@ public class NPC : MonoBehaviour
     public void FullHealthBtn()
     {
         NPCUI3.SetActive(false);
+    }
+
+    void EnterStore()
+    { 
+    mySfx.PlayOneShot(storeSfx);
     }
 }
