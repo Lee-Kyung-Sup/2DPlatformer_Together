@@ -68,10 +68,19 @@ public class Gold : MonoBehaviour
         int numMoney = GameManager.Instance.Money;
         if (numMoney >= Store1Money)
         {
-            currentValue = numMoney - Store1Money;
-            GameManager.Instance.Money = currentValue;
-            GameManager.Instance.UserMoney.text = String.Format("{0:#,###}", currentValue);
-            SoldOut1Sprite.SetActive(true);
+            if (health.qtdLife == 3)
+            {
+                NPCUI3.SetActive(true);
+            }
+            else
+            {
+                health.Heal();
+
+                currentValue = numMoney - Store1Money;
+                GameManager.Instance.Money = currentValue;
+                GameManager.Instance.UserMoney.text = String.Format("{0:#,###}", currentValue);
+                SoldOut1Sprite.SetActive(true);
+            }
         }
         else
         {
@@ -84,10 +93,19 @@ public class Gold : MonoBehaviour
         int numMoney = GameManager.Instance.Money;
         if (numMoney >= Store2Money)
         {
-            currentValue = numMoney - Store2Money;
-            GameManager.Instance.Money = currentValue;
-            GameManager.Instance.UserMoney.text = String.Format("{0:#,###}", currentValue);
-            SoldOut2Sprite.SetActive(true);
+            if (health.qtdLife == 3)
+            {
+                NPCUI3.SetActive(true);
+            }
+            else
+            {
+                health.Heal();
+
+                currentValue = numMoney - Store2Money;
+                GameManager.Instance.Money = currentValue;
+                GameManager.Instance.UserMoney.text = String.Format("{0:#,###}", currentValue);
+                SoldOut2Sprite.SetActive(true);
+            }
         }
         else
         {
