@@ -20,6 +20,7 @@ public class Gold : MonoBehaviour
     public int Store3Money;
 
     public GameObject NPCUI3;
+    public GameObject NPCBeggar;
 
     private void Start()
     {
@@ -65,37 +66,59 @@ public class Gold : MonoBehaviour
     public void BuyBtn1()
     {
         int numMoney = GameManager.Instance.Money;
-
-        currentValue = numMoney - Store1Money;
-        GameManager.Instance.Money = currentValue;
-        GameManager.Instance.UserMoney.text = String.Format("{0:#,###}", currentValue);
-        SoldOut1Sprite.SetActive(true);
+        if (numMoney >= Store1Money)
+        {
+            currentValue = numMoney - Store1Money;
+            GameManager.Instance.Money = currentValue;
+            GameManager.Instance.UserMoney.text = String.Format("{0:#,###}", currentValue);
+            SoldOut1Sprite.SetActive(true);
+        }
+        else
+        {
+            NPCBeggar.SetActive(true);
+        }
+        
     }
     public void BuyBtn2()
     {
         int numMoney = GameManager.Instance.Money;
-
-        currentValue = numMoney - Store2Money;
-        GameManager.Instance.Money = currentValue;
-        GameManager.Instance.UserMoney.text = String.Format("{0:#,###}", currentValue);
-        SoldOut2Sprite.SetActive(true);
-    }
-    public void BuyBtn3()
-    {
-        if (health.qtdLife == 3)
+        if (numMoney >= Store2Money)
         {
-            NPCUI3.SetActive(true);
+            currentValue = numMoney - Store2Money;
+            GameManager.Instance.Money = currentValue;
+            GameManager.Instance.UserMoney.text = String.Format("{0:#,###}", currentValue);
+            SoldOut2Sprite.SetActive(true);
         }
         else
         {
-            health.Heal();
-            int numMoney = GameManager.Instance.Money;
-
-            currentValue = numMoney - Store3Money;
-            GameManager.Instance.Money = currentValue;
-            GameManager.Instance.UserMoney.text = String.Format("{0:#,###}", currentValue);
-            SoldOut3Sprite.SetActive(true);
+            NPCBeggar.SetActive(true);
         }
+        
+    }
+    public void BuyBtn3()
+    {
+        int numMoney = GameManager.Instance.Money;
+        if (numMoney >= Store3Money)
+        {
+            if (health.qtdLife == 3)
+            {
+                NPCUI3.SetActive(true);
+            }
+            else
+            {
+                health.Heal();
+                
+                currentValue = numMoney - Store3Money;
+                GameManager.Instance.Money = currentValue;
+                GameManager.Instance.UserMoney.text = String.Format("{0:#,###}", currentValue);
+                SoldOut3Sprite.SetActive(true);
+            }
+        }
+        else
+        {
+            NPCBeggar.SetActive(true);
+        }
+        
     }
     
 }
