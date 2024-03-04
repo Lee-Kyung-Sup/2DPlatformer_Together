@@ -25,7 +25,7 @@ public class Gold : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        health = GameObject.Find("NewFox(key)").GetComponent<HealthController>();
+        health = GameObject.Find("Player").GetComponent<HealthController>();
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

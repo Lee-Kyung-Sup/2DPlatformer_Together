@@ -24,7 +24,7 @@ public class BossMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
+        rigid.velocity = new Vector2(nextMove*3, rigid.velocity.y); // 보스이동속도
 
         //발판 유뮤 체크, 없으면 멈춤
         Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 3f, rigid.position.y);
@@ -43,7 +43,7 @@ public class BossMove : MonoBehaviour
         // 움직이고 난 후에 다음에 어떻게 해야하지?
         nextMove = Random.Range(-1, 2);
 
-        float nextThinkTime = Random.Range(2f, 5f);
+        float nextThinkTime = Random.Range(1f, 2f);
         Invoke("Think", nextThinkTime); // 재귀함수
 
         //몬스터 애니메이션
@@ -59,7 +59,7 @@ public class BossMove : MonoBehaviour
         spriteRenderer.flipX = nextMove == 1;
 
         CancelInvoke();
-        Invoke("Think", 3);
+        Invoke("Think", 1);
     }
     void OnCollisionEnter2D(Collision2D collision) // 몬스터 피격시, 공격 애니메이션 이벤트
     {

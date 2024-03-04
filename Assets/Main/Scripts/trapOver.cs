@@ -12,6 +12,7 @@ public class trapOver : MonoBehaviour
     {
         if(collision.gameObject.name == targetObjectName)
         {
+            GameManager.Instance.gameObject.SetActive(false);
             SceneManager.LoadScene(sceneName);
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-public class HealthController : MonoBehaviour
+public class HealthControllerInBoss : MonoBehaviour
 {
     public float cooldownHit;
     private float rateOfHit;
@@ -50,7 +50,7 @@ public class HealthController : MonoBehaviour
         if (qtdLife <= 0)
         {
             GameManager.Instance.gameObject.SetActive(false);
-            SceneManager.LoadScene("NormalEnd");
+            SceneManager.LoadScene("WorstEndScene");
         }
     }
     public void Heal()

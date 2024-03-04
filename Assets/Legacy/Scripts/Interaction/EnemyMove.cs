@@ -54,15 +54,21 @@ public class EnemyMove : MonoBehaviour
         Invoke("Think", 3);
     }
 
-    /*
-    void OnCollisionEnter2D(Collision2D collision) // 몬스터 피격시, 공격 애니메이션 이벤트
+    
+    void OnCollisionEnter2D(Collision2D collision) 
     {
-        if (collision.gameObject.layer == 12)
+        if (collision.gameObject.CompareTag("Bullet"))
         {
-            Destroy(gameObject);
+            Invoke("Die", 3f);
         }
 
-    }*/
+    }
+
+    void Die()
+    {
+        anim.SetTrigger("Die");
+        Destroy(gameObject);
+    }
 
     
 }
