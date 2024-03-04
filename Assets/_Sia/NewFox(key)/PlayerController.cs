@@ -71,5 +71,11 @@ public class PlayerController : MonoBehaviour
                     anim.SetBool("IsJumping", false);
             }
         }
+
+        if (Input.GetKey(KeyCode.X))
+        {
+            anim.SetTrigger("Crouch");
+
+        }
     }
 }
