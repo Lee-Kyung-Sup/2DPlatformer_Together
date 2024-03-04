@@ -2012,7 +2012,7 @@ MonoBehaviour:
   Store1Money: 22222
   Store2Money: 0
   Store3Money: 0
-  NPCUI3: {fileID: 0}
+  NPCUI3: {fileID: 402275923}
   NPCBeggar: {fileID: 987258174}
 --- !u!114 &164162824
 MonoBehaviour:
@@ -18765,11 +18765,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7778597801054133337, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.69
+      value: 102.3
       objectReference: {fileID: 0}
     - target: {fileID: 7778597801054133337, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.57
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7778597801054133337, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37773,7 +37773,7 @@ MonoBehaviour:
   Store1Money: 0
   Store2Money: 33333
   Store3Money: 0
-  NPCUI3: {fileID: 0}
+  NPCUI3: {fileID: 402275923}
   NPCBeggar: {fileID: 987258174}
 --- !u!114 &2043367106
 MonoBehaviour:
