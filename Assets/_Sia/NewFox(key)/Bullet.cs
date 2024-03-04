@@ -22,8 +22,10 @@ public class Bullet : MonoBehaviour
         {
             if (ray.collider.tag == "Enemy") {
                 Debug.Log("ИэСп");
+                Destroy(ray.collider.gameObject);
+                DestroyBullet();
             }
-            DestroyBullet();
+           
         }
 
         if(transform.rotation.y == 0) {

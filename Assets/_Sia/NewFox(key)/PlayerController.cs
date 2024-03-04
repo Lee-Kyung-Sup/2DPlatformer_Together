@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     LayerMask islayer;
 
+    public GameObject Hp1;
+
     bool IsGround;
     SpriteRenderer spriteRenderer;
 
@@ -97,6 +99,8 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+    public int Hp_ = 3;
+
     void OnCollisionEnter2D(Collision2D collision) // 플레이어 피격 이벤트
     {
         if (collision.gameObject.tag == "Enemy")
@@ -117,7 +121,14 @@ public class PlayerController : MonoBehaviour
         //피격 애니메이션
         anim.SetTrigger("doDamaged");
 
+        Hp_ -= 1;
+        if (Hp_ < 0)
+        {
+            Hp_= 0;
+        }
+
         Invoke("OffDamaged", 2);
+
     }
 
     void OffDamaged() // 피격 후 2초 후에 레이어 원래대로
