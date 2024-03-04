@@ -2572,8 +2572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 720.32526, y: -148.75311}
-  m_SizeDelta: {x: 1321.2375, y: 177.7827}
+  m_AnchoredPosition: {x: 753.1613, y: -148.75311}
+  m_SizeDelta: {x: 1386.9097, y: 177.7827}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1292453966
 MonoBehaviour:
@@ -2608,7 +2608,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fox In the Forest II
+  m_Text: Fox In the Forest III
 --- !u!222 &1292453967
 CanvasRenderer:
   m_ObjectHideFlags: 0
