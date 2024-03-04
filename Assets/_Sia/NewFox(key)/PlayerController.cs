@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
     {
         gameObject.layer = 12;
 
-        spriteRenderer.color = new Color(1, 1, 1, 0.4f);
+        spriteRenderer.color = new Color(0.6981132f, 0.1522784f, 0.1522784f, 0.4f);
 
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
         rigid.AddForce(new Vector2(dirc, 1) * 7, ForceMode2D.Impulse);
@@ -127,13 +127,13 @@ public class PlayerController : MonoBehaviour
             Hp_= 0;
         }
 
-        Invoke("OffDamaged", 2);
+        Invoke("OffDamaged", 1);
 
     }
 
     void OffDamaged() // 피격 후 2초 후에 레이어 원래대로
     {
         gameObject.layer = 11;
-        spriteRenderer.color = new Color(178, 165, 165, 255);
+        spriteRenderer.color = new Color(0.6981132f, 0.6981132f, 0.6981132f, 1);
     }
 }
