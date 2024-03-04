@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && IsGround == true)
         { // Á¡ÇÁ&&¹Ù´Ú¿¡ ´ê¾ÒÀ»¶§¸¸
             rigid.velocity = Vector2.up * Jump;
+            anim.SetBool("IsJumping", true);
         }
     }
 
@@ -58,6 +59,17 @@ public class PlayerController : MonoBehaviour
         else if (hor < 0)
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+
+        if (rigid.velocity.y < 0) { 
+            Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
+            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
+
+            if(rayHit.collider != null)
+            {
+                if (rayHit.distance < 1f)
+                    anim.SetBool("IsJumping", false);
+            }
         }
     }
 }
