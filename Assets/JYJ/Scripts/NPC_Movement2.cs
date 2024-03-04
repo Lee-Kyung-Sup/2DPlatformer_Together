@@ -15,6 +15,8 @@ public class NPC_Movement2 : MonoBehaviour
     [SerializeField] private GameObject Penguin;
     [SerializeField] private GameObject Gold;
 
+    public AudioSource mySfx;
+    public AudioClip goldSfx;
     private void Awake()
     {
         anim = GetComponentInChildren<Animator>();
@@ -50,6 +52,7 @@ public class NPC_Movement2 : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            GoldSound();
             direction = 0;
             foreach (SpriteRenderer renderer in transform.GetComponentsInChildren<SpriteRenderer>())
             {
@@ -74,5 +77,10 @@ public class NPC_Movement2 : MonoBehaviour
     void MakeGold()
     {
         Gold.SetActive(true);
+    }
+
+    void GoldSound()
+    {
+        mySfx.PlayOneShot(goldSfx);
     }
 }

@@ -15,6 +15,9 @@ public class BossHP : MonoBehaviour
     Rigidbody2D rigid;
 
     public string sceneName;
+
+    public AudioSource mySfx;
+    public AudioClip dieSfx;
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -34,6 +37,7 @@ public class BossHP : MonoBehaviour
 
             if(gameObject.transform.Find("Canvas/HPFront").transform.localScale.x >= 0.267f)
             {
+                DieSound();
                 gameObject.transform.Find("Canvas/HPFront").transform.localScale = new Vector3(0.267f, 0.2666667f, 2.4f);
                 //보스 죽는거 생각
                 anim.SetTrigger("Die");
@@ -70,5 +74,10 @@ public class BossHP : MonoBehaviour
         gameObject.SetActive(false);
         GameManager.Instance.gameObject.SetActive(false);
         SceneManager.LoadScene(sceneName);
+    }
+
+    void DieSound()
+    {
+        mySfx.PlayOneShot(dieSfx);
     }
 }

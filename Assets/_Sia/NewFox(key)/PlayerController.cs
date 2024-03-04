@@ -23,6 +23,13 @@ public class PlayerController : MonoBehaviour
 
     //바닥 점프시 통과
     int playerLayer, platformLayer;
+
+    public AudioSource mySfx;
+    public AudioClip jumpSfx;
+
+    public AudioSource mySfx2;
+    public AudioClip hitSfx;
+
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -31,6 +38,8 @@ public class PlayerController : MonoBehaviour
 
         playerLayer = LayerMask.NameToLayer("Player");
         platformLayer = LayerMask.NameToLayer("Platform");
+
+   
     }
 
     
@@ -39,10 +48,13 @@ public class PlayerController : MonoBehaviour
         if (Mathf.Abs(rigid.velocity.x) < 0.2f)
         {
             anim.SetBool("IsWalking", false);
+          
         }
         else
         {
             anim.SetBool("IsWalking", true);
+            
+            
         }
 
 
@@ -55,6 +67,8 @@ public class PlayerController : MonoBehaviour
         { // 점프&&바닥에 닿았을때만
             rigid.velocity = Vector2.up * Jump;
             anim.SetBool("IsJumping", true);
+            JumpSound();
+            
         }
 
         //바닥 점프시 통과
@@ -105,16 +119,19 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            HitSound();
             OnDamaged(collision.transform.position);
         }
         if (collision.gameObject.CompareTag("Boss"))
         {
+            HitSound();
             OnDamaged(collision.transform.position);
         }
 
     }
     void OnDamaged(Vector2 targetPos) // 맞았을 때, 레이어 바꿔서 적용하기, 1초간 무적상태
     {
+        
         gameObject.layer = 12;
 
         spriteRenderer.color = new Color(0.6981132f, 0.1522784f, 0.1522784f, 0.4f); // 피격시 플레이어 색 바뀜
@@ -139,5 +156,15 @@ public class PlayerController : MonoBehaviour
     {
         gameObject.layer = 11;
         spriteRenderer.color = new Color(0.6981132f, 0.6981132f, 0.6981132f, 1);
+    }
+
+    void JumpSound()
+    {
+        mySfx.PlayOneShot(jumpSfx);
+    }
+
+    void HitSound()
+    {
+        mySfx2.PlayOneShot(hitSfx);
     }
 }
