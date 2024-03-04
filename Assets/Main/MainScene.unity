@@ -654,6 +654,7 @@ GameObject:
   - component: {fileID: 99735928}
   - component: {fileID: 99735927}
   - component: {fileID: 99735926}
+  - component: {fileID: 99735930}
   m_Layer: 8
   m_Name: FallingPlatform (5)
   m_TagString: Untagged
@@ -747,7 +748,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.23}
   m_SpriteTilingProperty:
@@ -814,6 +815,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &99735930
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99735924}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &104296822
 GameObject:
   m_ObjectHideFlags: 0
@@ -8460,6 +8480,7 @@ GameObject:
   - component: {fileID: 784698827}
   - component: {fileID: 784698826}
   - component: {fileID: 784698825}
+  - component: {fileID: 784698829}
   m_Layer: 8
   m_Name: FallingPlatform
   m_TagString: Untagged
@@ -8553,7 +8574,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.23}
   m_SpriteTilingProperty:
@@ -8620,6 +8641,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &784698829
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784698823}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &800376789
 GameObject:
   m_ObjectHideFlags: 0
@@ -13222,6 +13262,7 @@ GameObject:
   - component: {fileID: 837397649}
   - component: {fileID: 837397648}
   - component: {fileID: 837397647}
+  - component: {fileID: 837397651}
   m_Layer: 8
   m_Name: FallingPlatform (2)
   m_TagString: Untagged
@@ -13315,7 +13356,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.23}
   m_SpriteTilingProperty:
@@ -13382,6 +13423,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &837397651
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837397645}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &849406606
 GameObject:
   m_ObjectHideFlags: 0
@@ -13563,6 +13623,7 @@ GameObject:
   - component: {fileID: 857562583}
   - component: {fileID: 857562582}
   - component: {fileID: 857562581}
+  - component: {fileID: 857562585}
   m_Layer: 8
   m_Name: FallingPlatform (3)
   m_TagString: Untagged
@@ -13656,7 +13717,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.23}
   m_SpriteTilingProperty:
@@ -13723,6 +13784,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &857562585
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857562579}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &865079697
 GameObject:
   m_ObjectHideFlags: 0
@@ -14024,7 +14104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1014759576954540374, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9897844
+      value: -0.96
       objectReference: {fileID: 0}
     - target: {fileID: 1014759576954540374, guid: dde103fa7f8d05c4abe8a59057d70652, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14428,6 +14508,7 @@ GameObject:
   - component: {fileID: 978905537}
   - component: {fileID: 978905536}
   - component: {fileID: 978905535}
+  - component: {fileID: 978905539}
   m_Layer: 8
   m_Name: FallingPlatform (1)
   m_TagString: Untagged
@@ -14521,7 +14602,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.23}
   m_SpriteTilingProperty:
@@ -14588,6 +14669,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &978905539
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978905533}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &982770265
 GameObject:
   m_ObjectHideFlags: 0
@@ -14769,6 +14869,7 @@ GameObject:
   - component: {fileID: 1003238037}
   - component: {fileID: 1003238036}
   - component: {fileID: 1003238035}
+  - component: {fileID: 1003238039}
   m_Layer: 8
   m_Name: FallingPlatform (7)
   m_TagString: Untagged
@@ -14862,7 +14963,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.23}
   m_SpriteTilingProperty:
@@ -14929,6 +15030,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1003238039
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003238033}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1034599454
 GameObject:
   m_ObjectHideFlags: 0
@@ -25161,7 +25281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1329722909
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26669,6 +26789,7 @@ GameObject:
   - component: {fileID: 1772069583}
   - component: {fileID: 1772069582}
   - component: {fileID: 1772069581}
+  - component: {fileID: 1772069585}
   m_Layer: 8
   m_Name: FallingPlatform (4)
   m_TagString: Untagged
@@ -26762,7 +26883,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.23}
   m_SpriteTilingProperty:
@@ -26829,6 +26950,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1772069585
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772069579}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1784364042
 GameObject:
   m_ObjectHideFlags: 0
@@ -29048,6 +29188,7 @@ GameObject:
   - component: {fileID: 2113921344}
   - component: {fileID: 2113921343}
   - component: {fileID: 2113921342}
+  - component: {fileID: 2113921346}
   m_Layer: 8
   m_Name: FallingPlatform (6)
   m_TagString: Untagged
@@ -29141,7 +29282,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.23}
   m_SpriteTilingProperty:
@@ -29208,6 +29349,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &2113921346
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113921340}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &2127203258
 GameObject:
   m_ObjectHideFlags: 0
