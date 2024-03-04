@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
 
         }
     }
-    public int Hp_ = 3;
+    //public int Hp_ = 3;
 
     void OnCollisionEnter2D(Collision2D collision) // 플레이어 피격 이벤트
     {
@@ -109,11 +109,11 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    void OnDamaged(Vector2 targetPos) // 맞았을 때, 레이어 바꿔서 적용하기
+    void OnDamaged(Vector2 targetPos) // 맞았을 때, 레이어 바꿔서 적용하기, 1초간 무적상태
     {
         gameObject.layer = 12;
 
-        spriteRenderer.color = new Color(0.6981132f, 0.1522784f, 0.1522784f, 0.4f);
+        spriteRenderer.color = new Color(0.6981132f, 0.1522784f, 0.1522784f, 0.4f); // 피격시 플레이어 색 바뀜
 
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
         rigid.AddForce(new Vector2(dirc, 1) * 7, ForceMode2D.Impulse);
@@ -121,17 +121,17 @@ public class PlayerController : MonoBehaviour
         //피격 애니메이션
         anim.SetTrigger("doDamaged");
 
-        Hp_ -= 1;
+       /* Hp_ -= 1;
         if (Hp_ < 0)
         {
             Hp_= 0;
-        }
+        }*/
 
         Invoke("OffDamaged", 1);
 
     }
 
-    void OffDamaged() // 피격 후 2초 후에 레이어 원래대로
+    void OffDamaged() // 피격 후 1초 후에 레이어 원래대로
     {
         gameObject.layer = 11;
         spriteRenderer.color = new Color(0.6981132f, 0.6981132f, 0.6981132f, 1);

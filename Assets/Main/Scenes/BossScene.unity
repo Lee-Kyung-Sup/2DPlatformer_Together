@@ -12287,12 +12287,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UserMoney: {fileID: 1446294778}
   Money: 1000
-  MaxLife: 3
-  currentLife: 3
   HP1Sprite: {fileID: 171555651}
   HP2Sprite: {fileID: 1330835589}
   HP3Sprite: {fileID: 1847434394}
-  NPCUI3: {fileID: 0}
 --- !u!4 &1189586441
 Transform:
   m_ObjectHideFlags: 0
@@ -14483,6 +14480,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownHit: 0
+  life: []
+  qtdLife: 0
 --- !u!1 &1847434394
 GameObject:
   m_ObjectHideFlags: 0
