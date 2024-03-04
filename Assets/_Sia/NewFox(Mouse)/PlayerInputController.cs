@@ -39,4 +39,10 @@ public class PlayerInputController : CharacterController
         
         IsAttacking = value.isPressed;
     }
+
+    public void Jump()
+    {
+
+        Debug.Log("Jump");
+    }
 }
