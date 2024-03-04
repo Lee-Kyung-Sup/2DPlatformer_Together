@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Life
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -17,12 +18,12 @@ TagManager:
   - 
   - Platform
   - Enemy
+  - Level
   - Player
   - PlayerDamaged
   - PlayerAttack
   - Object
-  - 
-  - 
+  - Bullet
   - 
   - 
   - 
