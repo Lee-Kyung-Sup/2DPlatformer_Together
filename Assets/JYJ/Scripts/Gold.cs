@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Gold : MonoBehaviour
@@ -8,6 +9,7 @@ public class Gold : MonoBehaviour
     float currentPositionX;   
 
     SpriteRenderer spriteRenderer;
+    public HealthController health;
     [SerializeField] private GameObject MoneySprite;
     [SerializeField] private GameObject SoldOut1Sprite;
     [SerializeField] private GameObject SoldOut2Sprite;
@@ -16,11 +18,13 @@ public class Gold : MonoBehaviour
     public int Store1Money;
     public int Store2Money;
     public int Store3Money;
-    
 
-    private void Awake()
+    public GameObject NPCUI3;
+
+    private void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        health = GameObject.Find("NewFox(key)").GetComponent<HealthController>();
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -78,13 +82,13 @@ public class Gold : MonoBehaviour
     }
     public void BuyBtn3()
     {
-        if(GameManager.Instance.currentLife == 3)
+        if (health.qtdLife == 3)
         {
-            GameManager.Instance.Heal();
+            NPCUI3.SetActive(true);
         }
         else
         {
-            GameManager.Instance.Heal();
+            health.Heal();
             int numMoney = GameManager.Instance.Money;
 
             currentValue = numMoney - Store3Money;
@@ -93,5 +97,5 @@ public class Gold : MonoBehaviour
             SoldOut3Sprite.SetActive(true);
         }
     }
-
+    
 }

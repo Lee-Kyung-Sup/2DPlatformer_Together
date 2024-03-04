@@ -9,8 +9,10 @@ public class HealthController : MonoBehaviour
 {
     public float cooldownHit;
     private float rateOfHit;
-    private GameObject[] life;
-    private int qtdLife;
+    public GameObject[] life;
+    public int qtdLife;
+
+    
 
     void Start()
     {
@@ -45,6 +47,17 @@ public class HealthController : MonoBehaviour
             SceneManager.LoadScene("End_3_Scene");
         }
     }
-
-
+    public void Heal()
+    {
+        if (qtdLife == 2)
+        {
+            qtdLife = qtdLife + 1;
+            life[2].SetActive(true);
+        }
+        if (qtdLife == 1)
+        {
+            qtdLife = qtdLife + 1;
+            life[1].SetActive(true);
+        }
+    }
 }
