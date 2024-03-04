@@ -11,6 +11,11 @@ public class PlayerMove : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Animator anim;
 
+    private float curTime;
+    public float coolTime = 0.5f;
+    public Transform pos;
+    public Vector2 boxSize;
+
     //public GameManager manager;
     
     void Awake()
@@ -21,8 +26,27 @@ public class PlayerMove : MonoBehaviour
         
     }
 
+    //바닥 점프시 통과
+    int playerLayer, platformLayer;
+    void Start()
+    {
+        playerLayer = LayerMask.NameToLayer("Player");
+        platformLayer = LayerMask.NameToLayer("Platform");
+    }
     void Update()
     {
+        //바닥 점프시 통과
+        if(rigid.velocity.y > 0)
+        {
+            Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, true);
+        }
+        else
+        {
+            Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, false);
+        }
+
+
+
         if (Input.GetButtonUp("Horizontal"))
         {
             //키 뗐을 때
@@ -47,19 +71,31 @@ public class PlayerMove : MonoBehaviour
         }
 
         //애니메이션 전환-공격 : q키를 눌렀을 때 어택 애니메이션이 실행되고 있지 않다면 트리거 진행
-        if (Input.GetKeyDown(KeyCode.Q) && !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        if (curTime <=0)
+            //&& !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")
         {
-            anim.SetTrigger("attack");
-            gameObject.layer = 12;
-            Invoke("OnAttack", 1);
+            if (Input.GetKey(KeyCode.Q) && !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+            {//공격
+
+                Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
+                foreach (Collider2D collider in collider2Ds)
+                {
+                    Debug.Log(collider.tag);
+                }
+                anim.SetTrigger("atk");
+                curTime = coolTime;
+            }
+            else
+            {
+                curTime -= Time.deltaTime;
+            }
+       
+        
         }
 
         
     }
-    void OnAttack()
-    {
-        gameObject.layer = 10;
-    }
+    
 
 
     void FixedUpdate()
@@ -88,14 +124,14 @@ public class PlayerMove : MonoBehaviour
         }
         
     }
-     void OnCollisionEnter2D(Collision2D collision) // 플레이어 피격 이벤트
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             OnDamaged(collision.transform.position);
         }
-        
     }
+   
     void OnDamaged(Vector2 targetPos) // 맞았을 때, 레이어 바꿔서 적용하기
     {
         gameObject.layer = 11;
@@ -115,5 +151,11 @@ public class PlayerMove : MonoBehaviour
     {
         gameObject.layer = 10;
         spriteRenderer.color = new Color(1, 1, 1, 1);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(pos.position, boxSize);
     }
 }
