@@ -103,11 +103,11 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision) // 플레이어 피격 이벤트
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             OnDamaged(collision.transform.position);
         }
-        if (collision.gameObject.tag == "Boss")
+        if (collision.gameObject.CompareTag("Boss"))
         {
             OnDamaged(collision.transform.position);
         }

@@ -16,7 +16,8 @@ GameObject:
   - component: {fileID: 1983510135071105029}
   - component: {fileID: 3217320142539156108}
   - component: {fileID: 596474773397342702}
-  m_Layer: 0
+  - component: {fileID: 5786451899984505698}
+  m_Layer: 11
   m_Name: NewFox(key)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -32,13 +33,13 @@ Transform:
   m_GameObject: {fileID: 770857689261287631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.21, y: -1.97, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5459198029664545386}
   - {fileID: 2901874282546337986}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8929991564435354492
 SpriteRenderer:
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: 424ab41719af7a04c9a2e28c2911f63e, type: 3}
-  m_Color: {r: 0.7924528, g: 0.5943396, b: 0.5943396, a: 1}
+  m_Color: {r: 0.6981132, g: 0.6487184, b: 0.6487184, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -152,12 +153,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e60fe50052605446b2258ad2a5463a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Jump: 14
+  Jump: 10
   pos: {fileID: 5459198029664545386}
   checkRadius: 0.35
   islayer:
     serializedVersion: 2
     m_Bits: 256
+  Hp1: {fileID: 0}
 --- !u!114 &1983510135071105029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +229,21 @@ CapsuleCollider2D:
   m_Offset: {x: -0.11037207, y: 0.054623067}
   m_Size: {x: 0.77, y: 1.0496191}
   m_Direction: 0
+--- !u!114 &5786451899984505698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770857689261287631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630ac560e8badd543bdfe454956d2cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownHit: 0
+  life: []
+  qtdLife: 0
 --- !u!1 &2980663146184186331
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5459198029664545386}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2901874282546337986}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bulletpos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

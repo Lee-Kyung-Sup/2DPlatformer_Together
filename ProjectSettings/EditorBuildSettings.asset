@@ -11,11 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main/Scenes/MainScene.unity
     guid: 01c03c9b809310041aaac747de0864f5
-  - enabled: 0
-    path: Assets/JYJ/Scene/NPC_1_Scene.unity
-    guid: 537153301c8a6614992eaa94e24408a9
   - enabled: 1
-    path: Assets/Main/Scenes/End_3_Scene.unity
+    path: Assets/Main/Scenes/NormalEnd.unity
     guid: 058d81ddff3690f47ae4fc913abb3ef4
   - enabled: 1
     path: Assets/Main/Scenes/BossScene.unity
