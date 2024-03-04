@@ -8,6 +8,9 @@ public class BossMove : MonoBehaviour
     public int nextMove;
     Animator anim;
     SpriteRenderer spriteRenderer;
+
+    //float full = 5.0f;
+    //float energy = 0.0f;
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -60,7 +63,20 @@ public class BossMove : MonoBehaviour
             anim.SetTrigger("DoAtk");
         }
 
+
+        /*if ( (collision.gameObject.tag == "Bullet") && (energy < full) )
+        {
+            Debug.Log("명중!");
+            energy += 1.0f;
+            Destroy(collision.gameObject);
+            gameObject.transform.Find("Boss/Canvas/HPFront").transform.localScale = new Vector3(energy / full, 1.0f, 1.0f);
+        }
+        else
+        {
+            Debug.Log("배가 다 찼어요");
+        }
+
+    }*/
+
     }
-
-
 }

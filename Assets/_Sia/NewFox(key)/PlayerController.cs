@@ -107,6 +107,10 @@ public class PlayerController : MonoBehaviour
         {
             OnDamaged(collision.transform.position);
         }
+        if (collision.gameObject.tag == "Boss")
+        {
+            OnDamaged(collision.transform.position);
+        }
 
     }
     void OnDamaged(Vector2 targetPos) // 맞았을 때, 레이어 바꿔서 적용하기, 1초간 무적상태
@@ -127,11 +131,11 @@ public class PlayerController : MonoBehaviour
             Hp_= 0;
         }*/
 
-        Invoke("OffDamaged", 1);
+        Invoke("OffDamaged", 2f);
 
     }
 
-    void OffDamaged() // 피격 후 1초 후에 레이어 원래대로
+    void OffDamaged() // 피격 후 2초 후에 레이어 원래대로
     {
         gameObject.layer = 11;
         spriteRenderer.color = new Color(0.6981132f, 0.6981132f, 0.6981132f, 1);

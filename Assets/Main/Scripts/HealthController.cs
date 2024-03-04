@@ -30,6 +30,11 @@ public class HealthController : MonoBehaviour
             Hurt();
        
         }
+        if(other.gameObject.tag == "Boss")
+        {
+            Hurt();
+
+        }
     }
     
     public void Hurt()

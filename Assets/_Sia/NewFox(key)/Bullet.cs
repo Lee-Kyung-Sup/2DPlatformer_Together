@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class Bullet : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class Bullet : MonoBehaviour
 
     public float distance;
     public LayerMask isLayer;
+
+    //float full = 5.0f;
+    //float energy = 0.0f;
     void Start()
     {
         Invoke("DestroyBullet", 0.5f);
@@ -25,7 +30,10 @@ public class Bullet : MonoBehaviour
                 Destroy(ray.collider.gameObject);
                 DestroyBullet();
             }
+
+
            
+
         }
 
         if(transform.rotation.y == 0) {
@@ -36,6 +44,20 @@ public class Bullet : MonoBehaviour
             transform.Translate(transform.right * -1 * speed * Time.deltaTime);
         }
     }
+    /*void OnTriggerEnter2D (Collider2D coll)
+    {
+        Debug.Log("명중");
+        if (energy<full)
+        {
+            energy += 1.0f;
+            DestroyBullet();
+            gameObject.transform.Find("BossHPbar/Canvas/HPFront").transform.localScale = new Vector3(energy / full, 1.0f, 1.0f);
+        }
+        else
+        {
+            Debug.Log("배가 다 찼어요");
+        }
+    }*/
 
     void DestroyBullet()
     {
