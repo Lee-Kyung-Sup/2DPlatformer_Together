@@ -8,9 +8,13 @@ public class PlayerAttack : MonoBehaviour
     public Transform pos;
     public float cooltime;
     private float curtime;
+
+    Rigidbody2D rigid;
+    Animator anim;
     void Start()
     {
-        
+        rigid = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -18,9 +22,10 @@ public class PlayerAttack : MonoBehaviour
     {
         if (curtime <= 0)
         {
-            if (Input.GetKey(KeyCode.Q))
+            if (Input.GetKey(KeyCode.Q)&& !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
             {
                 Instantiate(bullet, pos.position, transform.rotation);
+                anim.SetTrigger("Attack");
 
             }
             curtime = cooltime;

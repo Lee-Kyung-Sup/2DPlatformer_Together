@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TopDownMovement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     private CharacterController _controller;
 
@@ -10,6 +10,8 @@ public class TopDownMovement : MonoBehaviour
     private Rigidbody2D _rigidbody;
 
     private CharacterStatsHandler _stats;
+
+    //public float jumpPower;
 
     private void Awake()
     {
@@ -22,6 +24,12 @@ public class TopDownMovement : MonoBehaviour
     {
         _controller.OnMoveEvent += Move;
     }
+
+    /*void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+            _rigidbody.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+    }*/
 
     private void FixedUpdate()
     {
