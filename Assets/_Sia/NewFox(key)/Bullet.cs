@@ -48,8 +48,5 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void DestroyMonster()
-    {
-        Destroy(gameObject);
-    }
+    
 }

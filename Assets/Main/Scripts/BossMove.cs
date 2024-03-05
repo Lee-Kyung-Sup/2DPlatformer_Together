@@ -65,6 +65,7 @@ public class BossMove : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            nextMove = 0;
             anim.SetTrigger("DoAtk");
         }
 

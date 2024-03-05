@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    void OnDamaged(Vector2 targetPos) // 맞았을 때, 레이어 바꿔서 적용하기, 1초간 무적상태
+    void OnDamaged(Vector2 targetPos) // 맞았을 때, 레이어 바꿔서 적용하기, 5초간 무적상태
     {
         
         gameObject.layer = 12;
@@ -149,13 +149,19 @@ public class PlayerController : MonoBehaviour
         }*/
 
         Invoke("OffDamaged", 2f);
+        Invoke("Super", 5f);
 
     }
 
     void OffDamaged() // 피격 후 2초 후에 레이어 원래대로
     {
-        gameObject.layer = 11;
+        
         spriteRenderer.color = new Color(0.6981132f, 0.6981132f, 0.6981132f, 1);
+    }
+    void Super() // 피격 후 5초동안 무적
+    {
+        gameObject.layer = 11;
+        
     }
 
     void JumpSound()

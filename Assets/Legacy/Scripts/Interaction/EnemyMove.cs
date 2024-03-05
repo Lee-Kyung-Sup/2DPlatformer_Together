@@ -71,7 +71,7 @@ public class EnemyMove : MonoBehaviour
     void Die()
     {
         anim.SetTrigger("Die");
-        Destroy(gameObject);
+        Destroy(gameObject,3);
     }
 
     void DieSound()

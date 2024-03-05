@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 786811087812217135}
   - component: {fileID: 4879958847119160729}
   - component: {fileID: 6687382122006667230}
-  m_Layer: 10
-  m_Name: player
+  m_Layer: 11
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,6 +123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 3
   jumpPower: 12
+  coolTime: 0.5
+  pos: {fileID: 0}
+  boxSize: {x: 0, y: 0}
 --- !u!61 &4879958847119160729
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 596474773397342702}
   - component: {fileID: 5786451899984505698}
   m_Layer: 11
-  m_Name: NewFox(key)
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ Transform:
   - {fileID: 5459198029664545386}
   - {fileID: 2901874282546337986}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8929991564435354492
 SpriteRenderer:
@@ -160,6 +160,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   Hp1: {fileID: 0}
+  mySfx: {fileID: 0}
+  jumpSfx: {fileID: 8300000, guid: 7db3ac5311179a14b9d94b1826851e7d, type: 3}
+  mySfx2: {fileID: 0}
+  hitSfx: {fileID: 8300000, guid: 96236b045a208204bacd33e660c978dd, type: 3}
 --- !u!114 &1983510135071105029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +179,8 @@ MonoBehaviour:
   bullet: {fileID: 4497591604864430034, guid: f8440a61659986c4dbbc584597c2bea0, type: 3}
   pos: {fileID: 2901874282546337986}
   cooltime: 0.1
+  mySfx: {fileID: 0}
+  atkSfx: {fileID: 8300000, guid: e78eded50db863b4b8e1d76a4aef5170, type: 3}
 --- !u!251 &3217320142539156108
 PlatformEffector2D:
   m_ObjectHideFlags: 0
