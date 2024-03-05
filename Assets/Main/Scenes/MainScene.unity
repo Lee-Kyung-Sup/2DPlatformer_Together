@@ -29804,7 +29804,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1268529902}
         m_TargetAssemblyTypeName: NPC, Assembly-CSharp
-        m_MethodName: StroeExitBtn
+        m_MethodName: StoreExitBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
