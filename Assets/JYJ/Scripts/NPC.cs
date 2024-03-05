@@ -19,7 +19,7 @@ public class NPC : MonoBehaviour
     public AudioClip storeSfx;
     private void OnMouseDown()
     {
-        EnterStore();
+        StoreSound();
         NPCUI1.SetActive(true);
     }
 
@@ -38,7 +38,7 @@ public class NPC : MonoBehaviour
         NPCUI2.SetActive(true);
     }
 
-    public void StroeExitBtn()
+    public void StoreExitBtn()
     {
         Store.SetActive(false);
     }
@@ -48,8 +48,8 @@ public class NPC : MonoBehaviour
         NPCUI3.SetActive(false);
     }
 
-    void EnterStore()
-    { 
-    mySfx.PlayOneShot(storeSfx);
+    void StoreSound()
+    {
+        mySfx.PlayOneShot(storeSfx);
     }
 }

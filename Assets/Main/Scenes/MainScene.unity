@@ -18048,7 +18048,7 @@ MonoBehaviour:
   NPCUI3: {fileID: 0}
   Store: {fileID: 0}
   mySfx: {fileID: 159698357}
-  storeSfx: {fileID: 0}
+  storeSfx: {fileID: 8300000, guid: bbdbfe3e247ec024ca7934e41375c2ca, type: 3}
 --- !u!50 &911956118
 Rigidbody2D:
   serializedVersion: 4
@@ -38915,7 +38915,7 @@ GameObject:
   - component: {fileID: 2138932999}
   - component: {fileID: 2138933000}
   m_Layer: 0
-  m_Name: Mosterdie
+  m_Name: Monsterdie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39067,11 +39067,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7778597801054133337, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.26
+      value: 105.3
       objectReference: {fileID: 0}
     - target: {fileID: 7778597801054133337, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.67
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7778597801054133337, guid: 2e1b059c7b768e04e941df6d180e4639, type: 3}
       propertyPath: m_LocalPosition.z
