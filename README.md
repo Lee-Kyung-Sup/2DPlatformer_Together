@@ -2,7 +2,10 @@
 
 ## 프로젝트 소개
 플레이어가 몬스터를 물리치며 숲 속을 탐험하는 게임  
-종류: 2d 플랫포머
+게임 종류: 2d 플랫포머
+
+<img src="https://github.com/Lee-Kyung-Sup/2DPlatformer_Together/assets/120997897/896deb5f-f197-4760-9935-508d0a08c07e" width="400" height="300" />
+
 <br>
 
 ## 개발기간
